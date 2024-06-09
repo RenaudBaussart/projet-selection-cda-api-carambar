@@ -200,7 +200,7 @@
 - # Request:
 
 - Method: GET
-- Route: http://localhost:3000/api/random
+- Route: http://localhost:3000/api/jokes/random
 
 - ### Response:
 
