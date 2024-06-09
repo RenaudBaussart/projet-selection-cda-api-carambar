@@ -6,6 +6,17 @@ const PORT = process.env.PORT || 3000;
 // Middleware pour parser le JSON
 app.use(express.json());
 
+// Route pour ajouter une nouvelle blague
+app.post('/api/jokes', async (req, res) => {
+  try {
+    const { question, answer } = req.body;
+    const newJoke = await Joke.create({ question, answer });
+    res.status(201).json(newJoke);
+  } catch (error) {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 // Route pour récupérer une blague aléatoire
 app.get('/api/jokes/random', async (req, res) => {
   try {
