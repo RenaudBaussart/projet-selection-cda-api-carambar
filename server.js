@@ -78,7 +78,7 @@ app.get('/api/jokes/:id', async (req, res) => {
 });
 
 // Route pour récupérer une blague aléatoire
-app.get('/api/jokes/random', async (req, res) => {
+app.get('/api/random', async (req, res) => {
   try {
     const joke = await Joke.findOne({ order: Sequelize.literal('RANDOM()') });
     if (joke) {
