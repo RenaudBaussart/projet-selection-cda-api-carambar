@@ -62,6 +62,21 @@ app.get('/api/jokes', async (req, res) => {
   }
 });
 
+// Route pour récupérer une blague par ID
+app.get('/api/jokes/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const joke = await Joke.findByPk(id);
+    if (joke) {
+      res.json(joke);
+    } else {
+      res.status(404).json({ message: 'Joke not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 // Route pour récupérer une blague aléatoire
 app.get('/api/jokes/random', async (req, res) => {
   try {
