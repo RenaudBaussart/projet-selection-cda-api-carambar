@@ -1,11 +1,11 @@
 const express = require('express');
 const {
-    createJoke,
-    updateJoke,
-    deleteJoke,
-    getAllJokes,
-    getJokeById,
-    getRandomJoke,
+  createJoke,
+  updateJoke,
+  deleteJoke,
+  getAllJokes,
+  getRandomJoke,
+  getJokeById,
 } = require('../controllers/jokeController');
 
 const router = express.Router();
@@ -18,8 +18,8 @@ router.delete('/:id', deleteJoke);
 
 router.get('/', getAllJokes);
 
-router.get('/:id', getJokeById);
-
 router.get('/random', getRandomJoke);
+
+router.get('/:id', getJokeById);
 
 module.exports = router;
