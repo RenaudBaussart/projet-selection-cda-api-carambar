@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Carambar Jokes</title>
+</head>
+<body>
+    <section><h1>Bienvenue chez Carambar & co</h1></section>
+  <button id="jokeButton">Obtenir une blague</button>
+  <section class="joke" id="joke"></section>
+
+  <script>
+    document.getElementById('jokeButton').addEventListener('click', async () => {
+      const response = await fetch('/api/random');
+      const joke = await response.json();
+      document.getElementById('joke').innerText = `${joke.question}\n\n${joke.answer}`;
+    });
+  </script>
+</body>
+</html>
