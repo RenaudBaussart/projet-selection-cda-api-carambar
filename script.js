@@ -28,3 +28,24 @@ document.getElementById('allJokeButton').addEventListener('click', async () => {
   document.getElementById('allJokeResult').innerHTML = jokesHTML;
 });
 
+//add a joke to the table
+const form = document.getElementById('addJokeForm');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const question = document.getElementById('addJokeQuestion').value;
+  const answer = document.getElementById('addJokeAnswer').value;
+  const joke = { question, answer };
+  const response = await fetch('/api/jokes', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(joke)
+  });
+  if (response.ok) {
+    document.getElementById('addJokeResult').textContent = 'La blague a été ajoutée avec succès !';
+    form.reset();
+  } else {
+    document.getElementById('addJokeResult').textContent = 'Une erreur s\'est produite lors de l\'ajout de la blague.';
+  }
+});
