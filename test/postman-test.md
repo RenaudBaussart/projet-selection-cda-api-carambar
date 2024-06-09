@@ -23,3 +23,14 @@
   "createdAt": "2024-06-09T16:34:41.926Z"
 }
 ```
+
+### Request:
+
+- Method: DELETE
+- Route: http://localhost:3000/api/jokes/11
+
+### Response:
+
+```
+204 No Content
+```
