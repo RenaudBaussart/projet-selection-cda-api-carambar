@@ -13,3 +13,18 @@ document.getElementById('specificIdJokeButton').addEventListener('click', async 
     document.getElementById('specificIdJokeResult').innerText = `${joke.question}\n\n${joke.answer}`;
 });
 
+//all jokes in the table
+document.getElementById('allJokeButton').addEventListener('click', async () => {
+  const response = await fetch('/api/jokes');
+  const jokes = await response.json();
+  let jokesHTML = '<table>';
+  jokes.forEach(joke => {
+    jokesHTML += `<tr class='jokesTable'>
+                    <td>${joke.question}</td>
+                    <td>${joke.answer}</td>
+                  </tr>`;
+  });
+  jokesHTML += '</table>';
+  document.getElementById('allJokeResult').innerHTML = jokesHTML;
+});
+
