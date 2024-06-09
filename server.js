@@ -17,6 +17,41 @@ app.post('/api/jokes', async (req, res) => {
   }
 });
 
+// Route pour mettre à jour une blague existante
+app.put('/api/jokes/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { question, answer } = req.body;
+    const joke = await Joke.findByPk(id);
+    if (joke) {
+      joke.question = question;
+      joke.answer = answer;
+      await joke.save();
+      res.json(joke);
+    } else {
+      res.status(404).json({ message: 'Joke not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+// Route pour supprimer une blague existante
+app.delete('/api/jokes/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const joke = await Joke.findByPk(id);
+    if (joke) {
+      await joke.destroy();
+      res.status(204).end();
+    } else {
+      res.status(404).json({ message: 'Joke not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 // Route pour récupérer une blague aléatoire
 app.get('/api/jokes/random', async (req, res) => {
   try {
