@@ -52,6 +52,16 @@ app.delete('/api/jokes/:id', async (req, res) => {
   }
 });
 
+// Route pour récupérer toutes les blagues
+app.get('/api/jokes', async (req, res) => {
+  try {
+    const jokes = await Joke.findAll();
+    res.json(jokes);
+  } catch (error) {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 // Route pour récupérer une blague aléatoire
 app.get('/api/jokes/random', async (req, res) => {
   try {
