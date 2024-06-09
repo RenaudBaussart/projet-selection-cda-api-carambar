@@ -200,12 +200,16 @@
 - # Request:
 
 - Method: GET
-- Route: http://localhost:3000/api/jokes/random
+- Route: http://localhost:3000/api/random
 
 - ### Response:
 
 ```json
 {
-  "message": "Joke not found"
+  "id": 4,
+  "question": "Pourquoi le football c'est rigolo ?",
+  "answer": "Parce que Thierry en rit",
+  "createdAt": "2024-06-09T15:33:42.987Z",
+  "updatedAt": "2024-06-09T15:33:42.987Z"
 }
 ```
