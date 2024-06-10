@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const setupSwagger = require('./swagger/swagger');
 const jokeRoutes = require('./routes/jokeRoutes');
 const app = express();
@@ -9,6 +10,11 @@ app.use(express.json());
 
 // Configurer Swagger
 setupSwagger(app);
+
+// Servir le fichier index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Utiliser les routes de blagues
 app.use('/api/jokes', jokeRoutes);
