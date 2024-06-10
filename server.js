@@ -1,16 +1,20 @@
 const express = require('express');
+const setupSwagger = require('./swagger/swagger');
 const jokeRoutes = require('./routes/jokeRoutes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware to parse JSON
+// Middleware pour parser le JSON
 app.use(express.json());
 
-// Use jokes routes
-app.use('/api/jokes', jokeRoutes);
-app.use(express.static('./'));
+// Configurer Swagger
+setupSwagger(app);
 
-// Start server
+// Utiliser les routes de blagues
+app.use('/api/jokes', jokeRoutes);
+
+// Démarrer le serveur
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
