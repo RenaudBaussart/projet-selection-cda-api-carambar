@@ -2,9 +2,17 @@
 
 Une mini application web de blagues pour Carambar & co.
 
-## Installation
+## Table des matières
+1. [Installation](#installation)
+2. [Deploiement](#deploiement)
+3. [Api](#api-documentation)
+4. [Swagger](#accéder-à-la-documentation-swagger)
+5. [Technologies utilisées](#technologies-utilisées)
+6. [Licence](#licence)
 
-1. Clonez le dépôt :
+## Installation 
+
+1. Clonez le dépôt : 
   ```bash
   git clone https://github.com/RenaudBaussart/projet-selection-cda-api-carambar
   ```
@@ -61,7 +69,7 @@ La documentation de l'API est disponible via Swagger.
 
 ### Accéder à la documentation Swagger
 
-
+[Documentation swagger]()
 
 ### Technologies Utilisées
 
@@ -80,3 +88,5 @@ La documentation de l'API est disponible via Swagger.
 ### Licence
 
 Ce projet est sous licence MIT.
+
+[revenir en haut](#table-des-matières)
