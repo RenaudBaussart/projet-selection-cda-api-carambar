@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: carambar-jokes-app
+    env: node
+    plan: free
+    buildCommand: "pnpm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
