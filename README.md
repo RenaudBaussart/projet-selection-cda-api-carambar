@@ -69,7 +69,9 @@ La documentation de l'API est disponible via Swagger.
 
 ### Accéder à la documentation Swagger
 
-[Documentation swagger]()
+[Documentation swagger](https://config-oqnx.onrender.com/api-docs/)
+
+
 
 ### Technologies Utilisées
 
