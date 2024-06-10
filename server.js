@@ -4,9 +4,13 @@ const setupSwagger = require('./swagger/swagger');
 const jokeRoutes = require('./routes/jokeRoutes');
 const app = express();
 const PORT = process.env.PORT || 3000;
+var cors = require('cors')
 
 // Middleware to parse json
 app.use(express.json());
+
+//middleware to enable cors
+app.use(cors())
 
 // Configure Swagger
 setupSwagger(app);
@@ -19,6 +23,8 @@ app.get('/', (req, res) => {
 
 // Utiliser les routes de blagues
 app.use('/api/jokes', jokeRoutes);
+
+//enable static link
 app.use(express.static('./'));
 
 // Démarrer le serveur

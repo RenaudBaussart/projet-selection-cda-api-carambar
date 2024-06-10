@@ -1,6 +1,6 @@
 //random jokes
 document.getElementById('randomJokeButton').addEventListener('click', async () => {
-    const response = await fetch('/api/jokes/random');
+    const response = await fetch('https://projet-selection-cda-api-carambar.onrender.com/api/jokes/random');
     const joke = await response.json();
     document.getElementById('randomJokeResult').innerText = `${joke.question}\n\n${joke.answer}`;
   });
@@ -8,14 +8,14 @@ document.getElementById('randomJokeButton').addEventListener('click', async () =
 //spécifique jokes id
 document.getElementById('specificIdJokeButton').addEventListener('click', async () => {
     const jokeId = document.getElementById('specificIdJokeInput').value;
-    const response = await fetch(`/api/jokes/${jokeId}`);
+    const response = await fetch(`https://projet-selection-cda-api-carambar.onrender.com/api/jokes/${jokeId}`);
     const joke = await response.json();
     document.getElementById('specificIdJokeResult').innerText = `${joke.question}\n\n${joke.answer}`;
 });
 
 //all jokes in the table
 document.getElementById('allJokeButton').addEventListener('click', async () => {
-  const response = await fetch('/api/jokes');
+  const response = await fetch('https://projet-selection-cda-api-carambar.onrender.com/api/jokes');
   const jokes = await response.json();
   let jokesHTML = '<table>';
   jokes.forEach(joke => {
@@ -35,7 +35,7 @@ form.addEventListener('submit', async (event) => {
   const question = document.getElementById('addJokeQuestion').value;
   const answer = document.getElementById('addJokeAnswer').value;
   const joke = { question, answer };
-  const response = await fetch('/api/jokes', {
+  const response = await fetch('https://projet-selection-cda-api-carambar.onrender.com/api/jokes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
