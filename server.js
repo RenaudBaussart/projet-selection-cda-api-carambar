@@ -8,16 +8,8 @@ var cors = require('cors')
 // Middleware to parse json
 app.use(express.json());
 
-//midelware to enable cors
+//middleware to enable cors
 app.use(cors())
-
-app.get('/products/:id', function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for all origins!'})
-})
-
-app.listen(80, function () {
-  console.log('CORS-enabled web server listening on port 80')
-})
 
 // Configure Swagger
 setupSwagger(app);
@@ -29,6 +21,8 @@ app.get('/', (req, res) => {
 
 // Utiliser les routes de blagues
 app.use('/api/jokes', jokeRoutes);
+
+//enable static link
 app.use(express.static('./'));
 
 // Démarrer le serveur

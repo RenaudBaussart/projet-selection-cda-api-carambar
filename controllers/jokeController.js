@@ -1,6 +1,6 @@
 const { Sequelize, Joke } = require('../models');
 
-// Récupérer toutes les blagues
+//get all jokes
 const getAllJokes = async (req, res) => {
   try {
     const jokes = await Joke.findAll();
@@ -10,7 +10,7 @@ const getAllJokes = async (req, res) => {
   }
 };
 
-// Récupérer une blague aléatoire
+//get a random joke
 const getRandomJoke = async (req, res) => {
   try {
     const joke = await Joke.findOne({ order: Sequelize.literal('RANDOM()') });
@@ -24,7 +24,7 @@ const getRandomJoke = async (req, res) => {
   }
 };
 
-// Récupérer une blague par ID
+// get a joke by is id
 const getJokeById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -39,7 +39,7 @@ const getJokeById = async (req, res) => {
   }
 };
 
-// Ajouter une nouvelle blague
+// add a joke by is id
 const createJoke = async (req, res) => {
   try {
     const { question, answer } = req.body;
@@ -50,7 +50,7 @@ const createJoke = async (req, res) => {
   }
 };
 
-// Mettre à jour une blague existante
+// appdate a existing joke
 const updateJoke = async (req, res) => {
   try {
     const { id } = req.params;
@@ -69,7 +69,7 @@ const updateJoke = async (req, res) => {
   }
 };
 
-// Supprimer une blague existante
+// delete a existing joke
 const deleteJoke = async (req, res) => {
   try {
     const { id } = req.params;
