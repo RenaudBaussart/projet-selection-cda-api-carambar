@@ -6,7 +6,7 @@ Une mini application web de blagues pour Carambar & co.
 1. [Installation](#installation)
 2. [Deploiement](#déploiement)
 3. [Api](#api-documentation)
-4. [Swagger](#accéder-à-la-documentation-swagger)
+4. [Accès aux différentes parties de l'API](#accéder-au-différentes-parties-de-lapi)
 5. [Technologies utilisées](#technologies-utilisées)
 6. [Licence](#licence)
 
@@ -67,10 +67,11 @@ L'application est déployée sur Render. Pour déployer, poussez simplement les 
 
 La documentation de l'API est disponible via Swagger.
 
-### Accéder à la documentation Swagger
+### Accéder au différentes parties de l'API
 
-[Documentation swagger](https://config-oqnx.onrender.com/api-docs/)
+[GitHub Pages](https://renaudbaussart.github.io/projet-selection-cda-api-carambar/)
 
+[Documentation swagger](https://projet-selection-cda-api-carambar.onrender.com/api-docs/)
 
 
 ### Technologies Utilisées
