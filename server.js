@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const setupSwagger = require('./swagger/swagger');
 const jokeRoutes = require('./routes/jokeRoutes');
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.json());
 setupSwagger(app);
 
 //path to the landing page
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
