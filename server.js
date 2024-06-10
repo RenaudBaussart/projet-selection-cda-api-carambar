@@ -5,19 +5,21 @@ const jokeRoutes = require('./routes/jokeRoutes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware pour parser le JSON
+// Middleware to parse json
 app.use(express.json());
 
-// Configurer Swagger
+// Configure Swagger
 setupSwagger(app);
 
-// Servir le fichier index.html
+//path to the landing page
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Utiliser les routes de blagues
 app.use('/api/jokes', jokeRoutes);
+app.use(express.static('./'));
 
 // Démarrer le serveur
 app.listen(PORT, () => {
