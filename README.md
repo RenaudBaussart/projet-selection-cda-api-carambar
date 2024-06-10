@@ -4,7 +4,7 @@ Une mini application web de blagues pour Carambar & co.
 
 ## Table des matières
 1. [Installation](#installation)
-2. [Deploiement](#deploiement)
+2. [Deploiement](#déploiement)
 3. [Api](#api-documentation)
 4. [Swagger](#accéder-à-la-documentation-swagger)
 5. [Technologies utilisées](#technologies-utilisées)
