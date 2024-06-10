@@ -16,36 +16,11 @@ const router = express.Router();
  *   schemas:
  *     Joke:
  *       type: object
- *       requi$ npm install swagger-ui-expressred:
+ *       required:
  *         - question
  *         - answer
  *       properties:
- *         id:const express = require('express');
-const {
-  createJoke,
-  updateJoke,
-  deleteJoke,
-  getAllJokes,
-  getRandomJoke,
-  getJokeById,
-} = require('../controllers/jokeController');
-
-const router = express.Router();
-
-router.post('/', createJoke);
-
-router.put('/:id', updateJoke);
-
-router.delete('/:id', deleteJoke);
-
-router.get('/', getAllJokes);
-
-router.get('/random', getRandomJoke);
-
-router.get('/:id', getJokeById);
-
-module.exports = router;
-
+ *         id:
  *           type: integer
  *           description: The auto-generated id of the joke
  *         question:
@@ -70,97 +45,13 @@ module.exports = router;
 /**
  * @swagger
  * /api/jokes:
- *   get:
- *     summary: Returns the list of all the jokes
- *     tags: [Jokes]
- *     responses:
- *       200:
- *         description: The list of the jokes
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/Joke'
- */
-router.get('/', getAllJokes);
-
-/**
- * @swagger
- * /api/jokes/random:
- *   get:
- *     summary: Returns a random joke
- *     tags: [Jokes]
- *     responses:
- *       200:
- *         d$ npm install swagger-ui-expressescription: A random joke
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Joke'
- */
-router.get('/random', getRandomJoke);
-
-/**
- * @swagger
- * /api/jokes/{id}:
- *   get:
- *     summary: Get the joke by id
- *     tags: [Jokes]
- *     parameters:
- *       - in: path
- *         name: id
- *         schema:
- *           type: integer
- *         required: true
- *         description: The joke id
- *     responses:
- *       200:
- *         description: The joke description by id
- *         contents:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Joke'
- *       404:
- *         description: The joke was not found
- */
-router.get('/:id', getJokeById);
-
-/**
- * @swagger
- * /api/jokes:
  *   post:
  *     summary: Create a new joke
  *     tags: [Jokes]
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:const express = require('express');
-const {
-  createJoke,
-  updateJoke,
-  deleteJoke,
-  getAllJokes,
-  getRandomJoke,
-  getJokeById,
-} = require('../controllers/jokeController');
-
-const router = express.Router();
-
-router.post('/', createJoke);
-
-router.put('/:id', updateJoke);
-
-router.delete('/:id', deleteJoke);
-
-router.get('/', getAllJokes);
-
-router.get('/random', getRandomJoke);
-
-router.get('/:id', getJokeById);
-
-module.exports = router;
-
+ *         application/json:
  *           schema:
  *             $ref: '#/components/schemas/Joke'
  *     responses:
@@ -228,5 +119,66 @@ router.put('/:id', updateJoke);
  *         description: The joke was not found
  */
 router.delete('/:id', deleteJoke);
+
+/**
+ * @swagger
+ * /api/jokes:
+ *   get:
+ *     summary: Returns the list of all the jokes
+ *     tags: [Jokes]
+ *     responses:
+ *       200:
+ *         description: The list of the jokes
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Joke'
+ */
+router.get('/', getAllJokes);
+
+/**
+ * @swagger
+ * /api/jokes/random:
+ *   get:
+ *     summary: Returns a random joke
+ *     tags: [Jokes]
+ *     responses:
+ *       200:
+ *         description: A random joke
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Joke'
+ */
+router.get('/random', getRandomJoke);
+
+/**
+ * @swagger
+ * /api/jokes/{id}:
+ *   get:
+ *     summary: Get the joke by id
+ *     tags: [Jokes]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: The joke id
+ *     responses:
+ *       200:
+ *         description: The joke description by id
+ *         contents:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Joke'
+ *       404:
+ *         description: The joke was not found
+ */
+router.get('/:id', getJokeById);
+
+
 
 module.exports = router;

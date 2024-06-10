@@ -15,7 +15,7 @@ const options = {
       },
     ],
   },
-  apis: ['./server.js'], // Chemin vers les fichiers contenant les annotations Swagger
+  apis: ['../server.js'], // Chemin vers les fichiers contenant les annotations Swagger
 };
 
 const swaggerSpec = swaggerJSDoc(options);
