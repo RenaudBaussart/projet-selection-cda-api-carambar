@@ -8,6 +8,7 @@ app.use(express.json());
 
 // Use jokes routes
 app.use('/api/jokes', jokeRoutes);
+pp.use(express.static("./"));
 
 // Start server
 app.listen(PORT, () => {

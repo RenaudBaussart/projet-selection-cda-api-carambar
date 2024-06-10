@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .jokeCards{
+    border: black solid 1px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10;
+  }
+  .jokeCards button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: solid black 1px;
+    border-radius: 10px;
+    background-color: palegoldenrod;
+  }
+  .jokeResult {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .jokesTable{
+    margin-top: 20px;
+  }
