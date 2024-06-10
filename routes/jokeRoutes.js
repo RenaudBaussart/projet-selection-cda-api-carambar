@@ -37,13 +37,6 @@ const router = express.Router();
 
 /**
  * @swagger
- * tags:
- *   name: Jokes
- *   description: The jokes managing API
- */
-
-/**
- * @swagger
  * /api/jokes:
  *   post:
  *     summary: Create a new joke
@@ -119,6 +112,13 @@ router.put('/:id', updateJoke);
  *         description: The joke was not found
  */
 router.delete('/:id', deleteJoke);
+
+/**
+ * @swagger
+ * tags:
+ *   name: Jokes
+ *   description: The jokes managing API
+ */
 
 /**
  * @swagger
