@@ -22,8 +22,11 @@ Une mini application web de blagues pour Carambar & co.
 3. Configurez la base de données :
 
   ```bash
-  npx sequelize-cli db:migrate
-  npx sequelize-cli db:seed:all
+  pnpx sequelize-cli db:migrate
+  ```
+
+  ```bash
+  pnpx sequelize-cli db:seed:all
   ```
 
 4. 
@@ -42,6 +45,15 @@ Une mini application web de blagues pour Carambar & co.
   ```bash
   pmpn start
   ```
+
+5. Accéder à l'application :
+  
+  ```bash
+  http://localhost:3000
+  ```
+
+## Déploiement
+L'application est déployée sur Render. Pour déployer, poussez simplement les modifications sur le dépôt GitHub connecté à Render.
 
 ## API Documentation
 
