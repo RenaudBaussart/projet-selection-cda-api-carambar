@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carambar Jokes</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <h1>Bienvenue chez Carambar & co</h1>
+
+  <!--"card" for the random jokes-->
+  <section class="jokeCards">
+    <h2>Blague aléatoire</h2>
+    <button id="randomJokeButton">Obtenir une blague</button>
+    <div class="jokeResult" id="randomJokeResult"></div>
+  </section>
+
+  <!--"card" for the selected by id joke-->
+  <section class="jokeCards">
+    <h2>Blague par son identifiant</h2>
+    <input type="text" name="idJokeInput" id="specificIdJokeInput">
+    <button id="specificIdJokeButton">Trouver</button>
+    <div class="jokeResult" id="specificIdJokeResult"></div>
+  </section>
+
+  <!--"card" for all the jokes-->
+  <section class="jokeCards">
+    <h2>Toutes les blagues</h2>
+    <button id="allJokeButton">Obtenir toutes les blagues</button>
+    <div class="jokeResult" id="allJokeResult"></div>
+  </section>
+  
+  <!--"card" for adding a new joke-->
+  <section class="jokeCards">
+    <h1>Ajouter une nouvelle blague</h1>
+    <form id="addJokeForm">
+      <label for="question">Question :</label>
+      <input type="text" id="addJokeQuestion" name="question" required>
+      <br>
+      <label for="answer">Réponse :</label>
+      <input type="text" id="addJokeAnswer" name="answer" required>
+      <br>
+      <button type="submit">Ajouter la blague</button>
+    </form>
+    <div id="addJokeResult"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
