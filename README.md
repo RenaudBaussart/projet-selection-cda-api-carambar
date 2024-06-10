@@ -2,9 +2,17 @@
 
 Une mini application web de blagues pour Carambar & co.
 
-## Installation
+## Table des matières
+1. [Installation](#installation)
+2. [Deploiement](#deploiement)
+3. [Api](#api-documentation)
+4. [Swagger](#accéder-à-la-documentation-swagger)
+5. [Technologies utilisées](#technologies-utilisées)
+6. [Licence](#licence)
 
-1. Clonez le dépôt :
+## Installation 
+
+1. Clonez le dépôt : 
   ```bash
   git clone https://github.com/RenaudBaussart/projet-selection-cda-api-carambar
   ```
@@ -22,8 +30,11 @@ Une mini application web de blagues pour Carambar & co.
 3. Configurez la base de données :
 
   ```bash
-  npx sequelize-cli db:migrate
-  npx sequelize-cli db:seed:all
+  pnpx sequelize-cli db:migrate
+  ```
+
+  ```bash
+  pnpx sequelize-cli db:seed:all
   ```
 
 4. 
@@ -43,11 +54,22 @@ Une mini application web de blagues pour Carambar & co.
   pmpn start
   ```
 
+5. Accéder à l'application :
+  
+  ```bash
+  http://localhost:3000
+  ```
+
+## Déploiement
+L'application est déployée sur Render. Pour déployer, poussez simplement les modifications sur le dépôt GitHub connecté à Render.
+
 ## API Documentation
 
 La documentation de l'API est disponible via Swagger.
 
 ### Accéder à la documentation Swagger
+
+[Documentation swagger](https://config-oqnx.onrender.com/api-docs/)
 
 
 
@@ -61,7 +83,12 @@ La documentation de l'API est disponible via Swagger.
 
 ![sqlite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 
+![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
+
+![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 
 ### Licence
 
 Ce projet est sous licence MIT.
+
+[revenir en haut](#table-des-matières)
