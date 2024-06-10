@@ -12,6 +12,7 @@ setupSwagger(app);
 
 // Utiliser les routes de blagues
 app.use('/api/jokes', jokeRoutes);
+app.use(express.static('./'));
 
 // Démarrer le serveur
 app.listen(PORT, () => {
