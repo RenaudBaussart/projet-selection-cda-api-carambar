@@ -1,6 +1,6 @@
 # Test API with Postman
 
-# Ajouter une blague
+# Add a Joke
 
 - ## Request:
 
@@ -28,7 +28,7 @@
 }
 ```
 
-# Supprimer une blague grace à l'ID
+# Delete a Joke with its ID
 
 - ## Request:
 
@@ -41,7 +41,7 @@
 204 No Content
 ```
 
-# Modifier une blague grace à l'ID
+# Update a Joke with its ID
 
 - ## Request:
 
@@ -78,7 +78,7 @@
 }
 ```
 
-# Récupérer toutes les blagues
+# Get all the Jokes
 
 - ## Request:
 
@@ -176,7 +176,7 @@
 ]
 ```
 
-# Récupérer une blague grace à l'ID
+# Get a Joke with its ID
 
 - ## Request:
 
@@ -195,7 +195,7 @@
 }
 ```
 
-# Récupérer une blague aléatoire
+# Get a random Joke
 
 - # Request:
 
