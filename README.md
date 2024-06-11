@@ -69,7 +69,7 @@ La documentation de l'API est disponible via Swagger.
 
 ### Accéder à la documentation Swagger
 
-[Documentation swagger](https://config-oqnx.onrender.com/api-docs/)
+[Documentation swagger](https://projet-selection-cda-api-carambar.onrender.com/api-docs/)
 
 
 
