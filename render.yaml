@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: carambar-jokes-app
+    name: projet-selection-cda-api-carambar
     env: node
     plan: free
     buildCommand: "pnpm install"

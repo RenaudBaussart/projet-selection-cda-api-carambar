@@ -21,13 +21,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Utiliser les routes de blagues
+// use routes for joke
 app.use('/api/jokes', jokeRoutes);
 
 //enable static link
 app.use(express.static('./'));
 
-// Démarrer le serveur
+// lunch the serveur
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

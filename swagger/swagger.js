@@ -5,7 +5,7 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Carambar Jokes API',
+      title: 'Projet selection cda api carambar',
       version: '1.0.0',
       description: 'API for managing Carambar jokes',
     },
@@ -15,7 +15,7 @@ const options = {
       },
     ],
   },
-  apis: ['./routes/*.js'], // Chemin vers les fichiers contenant les annotations Swagger
+  apis: ['./routes/*.js'], // path to the file that containe swagger annotation
 };
 
 const swaggerSpec = swaggerJSDoc(options);
