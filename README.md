@@ -71,7 +71,7 @@ La documentation de l'API est disponible via Swagger.
 
 [Documentation swagger](https://projet-selection-cda-api-carambar.onrender.com/api-docs/)
 
-
+### Lien du [github.io](https://renaudbaussart.github.io/projet-selection-cda-api-carambar/)
 
 ### Technologies Utilisées
 
